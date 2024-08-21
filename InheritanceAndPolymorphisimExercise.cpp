@@ -57,11 +57,22 @@ public:
 
 int main(){
 
-    Person item1 = Person();
-    item1.setName("Nurettin");
-    item1.setAge(22);
+    Person obj1 = Person();
+    obj1.setName("Nurettin");
+    obj1.setAge(22);
+    cout << obj1.toString() << endl;
 
-    cout << item1.toString() << endl;
+    Teacher obj2 = Teacher();
+    obj2.setName("John");
+    obj2.setAge(29);
+    obj2.setLesson("Programming");
+    cout << obj2.toString() << endl;
+
+    Student obj3 = Student();
+    obj3.setName("Clara");
+    obj3.setAge(19);
+    obj3.setStudentNumber(1016);
+    cout << obj3.toString() << endl;
      
     return 0;
 }
