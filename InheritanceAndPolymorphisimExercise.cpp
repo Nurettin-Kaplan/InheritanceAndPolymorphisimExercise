@@ -19,18 +19,24 @@ public:
     int getAge() {
         return age;
     }
+    virtual string toString() {
+        return this->name + " - " + to_string(this->age);
+    }
 };
 
 class Student : public Person{
 private:
-    int studentsNumber;
+    int studentNumber;
 
 public: 
-    void setStudentsNumber(int value) {
-        this->studentsNumber = value;
+    void setStudentNumber(int value) {
+        this->studentNumber = value;
     }
-    int getStudentsNumber() {
-        return this->studentsNumber;
+    int getStudentNumber() {
+        return this->studentNumber;
+    }
+    string toString() override {
+        return this->name + " - " + to_string(this->age) + " - " + to_string(this->studentNumber);
     }
 };
 
@@ -44,9 +50,18 @@ public:
     string getLesson() {
         return this->lesson;
     }
+    string toString() override {
+        return this->name + " - " + to_string(this->age) + " - " + this->lesson;
+    }
 };
 
 int main(){
 
+    Person item1 = Person();
+    item1.setName("Nurettin");
+    item1.setAge(22);
+
+    cout << item1.toString() << endl;
+     
     return 0;
 }
