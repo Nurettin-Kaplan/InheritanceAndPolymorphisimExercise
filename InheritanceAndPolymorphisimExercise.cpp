@@ -1,5 +1,5 @@
 ﻿#include <iostream>
-
+#include <string>
 using namespace std;
 
 class Person {
@@ -19,22 +19,34 @@ public:
     int getAge() {
         return age;
     }
-    Person() {
-        cout << "An instance has been derived from Person." << endl;
-    }
 };
 
 class Student : public Person{
+private:
+    int studentsNumber;
 
+public: 
+    void setStudentsNumber(int value) {
+        this->studentsNumber = value;
+    }
+    int getStudentsNumber() {
+        return this->studentsNumber;
+    }
 };
 
-class Teahcer : public Person {
-
+class Teacher : public Person {
+private:
+    string lesson;
+public:
+    void setLesson(string value) {
+        this->lesson = value;
+    }
+    string getLesson() {
+        return this->lesson;
+    }
 };
 
 int main(){
-
-
 
     return 0;
 }
