@@ -22,6 +22,13 @@ public:
     Person() {
         cout << "An instance has been derived from Person." << endl;
     }
+};
+
+class Student : public Person{
+
+};
+
+class Teahcer : public Person {
 
 };
 
